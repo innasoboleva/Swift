@@ -5,8 +5,6 @@
 //  Created by Inna Soboleva on 3/23/18.
 //
 
-import Foundation
-
 struct DictNode<K: Hashable, V> {
     var data: [(key: K, value: V)] = []
     
@@ -17,7 +15,6 @@ struct DictNode<K: Hashable, V> {
     mutating func removeValue(key: K) {
         data = data.filter{$0.key != key}
     }
-    
 }
 
 class Dict<K: Hashable, V> {
